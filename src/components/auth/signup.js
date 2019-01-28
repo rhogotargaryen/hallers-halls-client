@@ -13,8 +13,8 @@ class SignUp extends Component {
             }
 
     renderErrors() {
-        if(!!this.props.user.messages) {
-            return this.props.user.messages.map((x, i) => {
+        if(!!this.props.messages) {
+            return this.props.messages.map((x, i) => {
                 return <div className="alert alert-light" key={i}>{x}</div>
             })
         }
@@ -55,4 +55,4 @@ class SignUp extends Component {
     }
 }
 
-export default connect(state => {return {user: state.user, auth: state.login.auth}}, {postUserAction, loginAction})(SignUp)
+export default connect(state => {return {user: state.user, messages: state.messages, auth: state.login.auth}}, {postUserAction, loginAction})(SignUp)
