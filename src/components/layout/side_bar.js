@@ -6,7 +6,7 @@ export default class SideBar extends Component {
     renderAuthLinks() {
         if (this.props.auth.includes("Bearer")) {
             return (
-            <div className="row justify-content-center justify-content-sm-start">
+            <div className="row justify-content-center">
                 <div className="row-sm-auto col-auto"><Link className="badge badge-light" to={`/users/${this.props.user.id}`}>Your Homepage</Link></div><br></br>
                 <div className="row-sm-auto col-auto"><Link className="badge badge-light" to="/users">users</Link></div>
                 <div className="row-sm-auto col-auto"><Link className="badge badge-light" to="/items">items</Link></div>
@@ -15,7 +15,7 @@ export default class SideBar extends Component {
             </div>)
         } else {
             return (
-                <div className="row justify-content-center justify-content-sm-start">
+                <div className="row justify-content-center">
                     <div className="row-sm-auto col-auto"><Link className="badge badge-light" to="/users/new">Create User</Link></div><br></br>
                     <div className="row-sm-auto col-auto"><Link className="badge badge-light" to="/login">login</Link></div>
                     <div className="row-sm-auto col-auto"><Link className="badge badge-light" to="/users">users</Link></div>
