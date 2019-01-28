@@ -12,7 +12,6 @@ export default function loginAction(user) {
             })
         .then(resp => {temp_auth = resp.headers.get('authorization'); return resp.json()})
         .then(userData => {
-            debugger
             return temp_auth === null ? dispatch({type: "FAILED_AUTH"}) : dispatch({type: "USER_AUTHED", user: userData, auth: temp_auth})
             }
         ).catch( err => dispatch({type: "FAILED_AUTH"}))
