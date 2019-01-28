@@ -2,7 +2,7 @@ export default function postUserAction(user) {
     let temp_auth = null
     return dispatch => {
         dispatch({type: "SENDING_USER"}, user);
-        return fetch(`http://localhost:3001/signup`, { method: 'POST', 
+        return fetch(`https://hallers-halls.herokuapp.com/signup`, { method: 'POST', 
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({user: {...user}})})
             .then(resp => {temp_auth = resp.headers.get('authorization'); return resp.json()})
