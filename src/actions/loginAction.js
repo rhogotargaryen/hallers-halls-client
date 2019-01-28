@@ -4,7 +4,7 @@ export default function loginAction(user) {
     let temp_auth = null
     return dispatch => {
         dispatch({type: "AUTHORIZING"});
-        return fetch('https://hallers-halls.herokuapp.com/login', {method: 'post',
+        return fetch('https://hallers-halls-api.herokuapp.com/login', {method: 'post',
             headers: {
                 'Content-Type': 'application/json'
                 },

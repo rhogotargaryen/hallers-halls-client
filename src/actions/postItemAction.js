@@ -1,7 +1,7 @@
 export default function postItemAction(itemInfo) {
     return dispatch => {
         dispatch({type: "SENDIND_ITEM"}, itemInfo);
-        return fetch(`https://hallers-halls.herokuapp.com/api/items`, { method: 'POST', 
+        return fetch(`https://hallers-halls-api.herokuapp.com/api/items`, { method: 'POST', 
             headers: {'Content-Type': 'application/json', Authorization: itemInfo.auth},
             body: JSON.stringify({item: {...itemInfo}})})
             .then(resp => {return resp.json()})
