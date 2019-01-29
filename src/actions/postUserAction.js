@@ -7,6 +7,6 @@ export default function postUserAction(user) {
             body: JSON.stringify({user: {...user}})})
             .then(resp => {temp_auth = resp.headers.get('authorization'); return resp.json()})
             .then(userData => {return temp_auth === null ? dispatch({type: "FAILED_USER",  messages: userData.errors}) : dispatch({type: "USER_AUTHED", user: userData, auth: temp_auth})}
-        ).catch( err => {return dispatch({type: "FAILED_USER", messages: ["failed GERNERIC post user action"]})})
+        ).catch( err => {console.log(err); return dispatch({type: "FAILED_USER", messages: ["failed GERNERIC post user action"]})})
     }
 }
