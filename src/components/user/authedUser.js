@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import editAuthedUser from '../../actions/editAuthedUser'
 import { Link } from 'react-router-dom'
+import MyDropzone from './dropzone_avatars'
 
 class authedUser extends Component {
     constructor(props) {
@@ -48,6 +49,7 @@ class authedUser extends Component {
                             <Link className="badge badge-light" to={`/users/${this.props.user.id}`}>Back to your Homepage</Link>
                         </form>
                     </div><br></br>
+                    <MyDropzone />
                 </div>)
         } else {
             return (

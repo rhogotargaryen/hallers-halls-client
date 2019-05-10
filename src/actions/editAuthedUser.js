@@ -1,7 +1,7 @@
 export default function editAuthedUser(user) {
     return dispatch => {
         dispatch({type: "SENDING_USER"}, user);
-        return fetch(`https://hallers-halls-api.herokuapp.com/api/users/${user.id}`, { method: 'PATCH', 
+        return fetch(`${window.location.origin.replace('3000', '3001')}/api/users/${user.id}`, { method: 'PATCH', 
             headers: { Authorization: user.auth, 'Content-Type': 'application/json'},
             body: JSON.stringify({user: {...user, auth: ""}})})
             .then(resp => {return resp.json()})
