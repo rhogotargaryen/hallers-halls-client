@@ -15,6 +15,10 @@ code {
 }
 
 #root {
-  height: 100vh;
-  background-color: antiquewhite
+    height: 100vh;
+    background-color: #D2D7DF
+}
+
+.card {
+    background-color: #BDBBB0
 }
