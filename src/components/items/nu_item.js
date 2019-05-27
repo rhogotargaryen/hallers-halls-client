@@ -24,7 +24,7 @@ class NuItem extends Component {
     renderErrors() {
         if (!!this.props.messages) {
             return this.props.messages.map((x, i) => {
-                return <div className="alert alert-light" key={i}>{x}</div>
+                return <div className="alert alert-primary" key={i}>{x}</div>
         })}
     }
 

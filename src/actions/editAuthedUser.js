@@ -3,7 +3,7 @@ export default function editAuthedUser(user) {
         dispatch({type: "SENDING_USER"}, user);
         return fetch(`${window.location.origin.replace('3000', '3001')}/api/users/${user.id}`, { method: 'PATCH', 
             headers: { Authorization: user.auth, 'Content-Type': 'application/json'},
-            body: JSON.stringify({user: {...user, auth: ""}})})
+            body: JSON.stringify({ user: { ...user, avatar: user.avatar, auth: ""}})})
             .then(resp => {return resp.json()})
             .then(userData => {
                 if (userData.errors) {

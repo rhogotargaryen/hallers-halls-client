@@ -18,3 +18,4 @@ export default function MyDropzone() {
         </div>
     )
 }
+
