@@ -6,7 +6,7 @@
     "node": "10.14.2"
   },
   "dependencies": {
-    "bootstrap": "^3.4.0",
+    "bootstrap": "^3.4.1",
     "jquery": "^3.4.1",
     "localforage": "^1.7.3",
     "moment": "^2.23.0",
